@@ -1,0 +1,11 @@
+#Para placa de video intel instalar pkg install drm-kmod
+#e habilitar dbus para poder iniciar o Xorg.
+kld_list="i915kms"
+dbus_enable="YES"
+slim_enable="YES"
+webcamd_enable="YES"
+#WI-FI config
+wlans_iwn0="wlan0"
+ifconfig_wlan0="WPA SYNCDHCP"
+create_args_wlan0="country BR regdomain FCC"
+rc_startmsgs="NO"
