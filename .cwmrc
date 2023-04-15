@@ -1,0 +1,32 @@
+sticky yes
+
+fontname "terminus:pixelsize=16:bold"
+
+borderwidth 4
+color activeborder green
+
+gap 3 0 0 0
+
+#unbind-key CM-Return
+bind-key CM-Return "xterm"
+bind-key 4-Return "xterm -e tmux -u2"
+
+bind-key 4-F5 "doas sysctl hw.snd.default_unit=1"
+bind-key 4-F6 "doas sysctl hw.snd.default_unit=0"
+
+bind-key XF86AudioRaiseVolume "mixer vol +3"
+bind-key XF86AudioLowerVolume "mixer vol -3"
+bind-key XF86AudioMute "sh /home/jmc/.config/scripts/togglevol.sh"
+bind-key XF86Display "sh /home/jmc/.config/scripts/monitor.sh"
+
+bind-key 4-i "sh /home/jmc/.config/scripts/vga-dp.sh"
+bind-key 4-o "sh /home/jmc/.config/scripts/monitor.sh"
+bind-key 4-p "sh /home/jmc/.config/scripts/dp-lvds.sh"
+
+bind-key 4-q "doas shutdown -p now"
+bind-key 4-r "doas reboot"
+bind-key 4-l "xlock"
+bind-key 4-c "chrome"
+
+bind-key 4-z window-vtile
+bind-key 4-x window-htile
